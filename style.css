@@ -46,34 +46,45 @@ a{
 ul{
     list-style: none;
 }
-.section-img{
+.section-img, picture{
     height:100%;
     width:100%;
     object-fit: cover;
 }
+
 body{
     font-size: var(--f-size-body);
     font-family: var(--ff-primary); 
     background-color: var(--clr-light-yellow);
 }
+
 header{
     background: url('/images/mobile/image-header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    /* height: 500px; */
+    background-position: center bottom;
+    height: 490px;
     width:100%;
+}
+
+@media screen and (min-width: 600px){
+    header{
+        background: url('/images/desktop/image-header.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        height: 700px;
+    }
 }
 /*Navbar*/
 .nav-container{
-    /* background-color: #32FFF8; */
-    padding: 1em;
+    padding: 1rem;
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 1rem;
 }
 .nav-links{
     display: none;
@@ -85,11 +96,31 @@ nav{
 }
 .hero-arrow{
     display: block;
+    height: 100px;
     margin: 3rem auto 0 auto;
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 800px){
     .nav-links{
-        display:block;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+    .nav-links li:not(:first-child){
+        margin-left: 2rem;
+    }
+    .nav-links li:not(.contact-link){
+        color: var(--clr-light-yellow);
+    }
+    .contact-link{
+        padding: 0.75rem 1.5rem;
+        text-transform: uppercase;
+        font-family: var(--ff-secondary);
+        background-color: var(--clr-neutral);
+        border-radius: 2rem;
+        color: black;
+    }
+    .menu-icon{
+        display: none;
     }
 }
 
@@ -105,17 +136,68 @@ nav{
 }
 .graphic-section, .photography-section{
     position:relative;
-    height: 550px;
+    height: 600px;
+}
+.graphic-section{
+    background-image: url('/images/mobile/image-graphic-design.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.photography-section{
+    background-image: url('/images/mobile/image-photography.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
+@media screen and (min-width: 400px) {
+    .graphic-section{
+        background-image: url('/images/desktop/image-graphic-design.jpg');
+    }
+    .photography-section{
+        background-image: url('/images/desktop/image-photography.jpg');
+    }
+}
+
+/* .brand-section .section-info, .audience-section .section-info{
+    padding: 4rem 2rem;
+} */
+
+@media screen and (min-width: 800px){
+    .brand-section, .audience-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+    .brand-section h2, .audience-section h2{
+        text-align: left;
+    }
+    .brand-section .section-info{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .brand-section .section-info, .audience-section .section-info{
+        text-align: left;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Photography and Graphic Design Sections */
 .photography-section .section-info, .graphic-section .section-info{
     position:absolute;
     z-index: 1;
     bottom:0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
 }
 
 .section-info{
-    padding: 4rem 0.50rem;
+    padding: 4rem 0.75rem;
+    max-width: 50ch;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -146,7 +228,7 @@ nav{
     left: 50%;
     top: 60%;
     transform: translateX(-50%);
-    width: 140px;
+    width: 130px;
     border-top: 10px solid var(--clr-soft-red);
     border-radius: 1rem;
     opacity: 20%;
@@ -154,10 +236,30 @@ nav{
 .brand-section .section-btn::after{
     border-top: 10px solid var(--clr-yellow);
 }
+@media screen and (min-width: 800px){
+    .section-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 /* Testimonials */
 .testimonials-section{
-    padding: 2em 0;
+    padding: 3rem 0;
+}
+
+@media screen and (min-width: 800px){
+    .testimonials-section{
+        padding: 7rem 0;
+    }
+    .testimonials{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .testimonial p{
+        padding: 4rem 0;
+    }
 }
 .testimonial img{
     border-radius: 50%;
@@ -167,9 +269,9 @@ nav{
     display:grid;
     place-items:center;
     text-align: center;
-    /* row-gap: 20px; */
     padding: 2rem;
 }
+
 .testimonials-section .section-title{
     color: var(--clr-gray-blue);
     font-weight: 900;
@@ -177,6 +279,7 @@ nav{
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 .testimonial h4{
     font-family: var(--ff-secondary);
@@ -186,6 +289,7 @@ nav{
 .testimonial p{
     color: var(--clr-very-dark-gray-blue);
     font-size: 16px;
+    max-width: 35ch;
     padding: 2rem 0;
 }
 .testimonial span{
@@ -197,6 +301,25 @@ nav{
 .image-gallery{
     display:grid;
     grid-template-columns:1fr 1fr;
+    /* height: 350px; */
+}
+
+@media screen and (min-width: 800px){
+    .image-gallery{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .milk-img{
+        background-image: url('/images/desktop/image-gallery-milkbottles.jpg');
+    }
+    .orange-img{
+        background-image: url('/images/desktop/image-gallery-orange.jpg');
+    }
+    .icecream-img{
+        background-image: url('/images/desktop/image-gallery-cone.jpg');
+    }
+    .sugar-img{
+        background-image: url('/images/desktop/image-gallery-sugarcubes.jpg');
+    }
 }
 
 footer{
@@ -209,13 +332,14 @@ footer{
     font-size: 16px;
 }
 .footer-logo{
-    /* background-color: var(--clr-footer); */
-    /* fill: var(--clr-footer); */
+    filter: invert(53%) sepia(7%) saturate(2367%) hue-rotate(118deg) brightness(89%) contrast(89%);
 }
+
 .footer-links{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    max-width: 20rem;
     padding: 1rem 0 2rem 0;
 }
 .media-links{

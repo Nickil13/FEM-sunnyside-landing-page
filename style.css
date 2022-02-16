@@ -390,16 +390,16 @@ nav {
     grid-template-columns: repeat(4, 1fr);
   }
   .milk-img {
-    background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
+    background-image: url("/.images/desktop/image-gallery-milkbottles.jpg");
   }
   .orange-img {
-    background-image: url("/images/desktop/image-gallery-orange.jpg");
+    background-image: url("/.images/desktop/image-gallery-orange.jpg");
   }
   .icecream-img {
-    background-image: url("/images/desktop/image-gallery-cone.jpg");
+    background-image: url("/.images/desktop/image-gallery-cone.jpg");
   }
   .sugar-img {
-    background-image: url("/images/desktop/image-gallery-sugarcubes.jpg");
+    background-image: url("/.images/desktop/image-gallery-sugarcubes.jpg");
   }
 }
 

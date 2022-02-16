@@ -181,6 +181,8 @@ nav {
 .brand-section p {
   color: var(--clr-dark-gray-blue);
 }
+
+/* Photography and Graphic Design Sections */
 .graphic-section h3,
 .graphic-section p {
   color: var(--clr-graphic-text);
@@ -207,39 +209,6 @@ nav {
   background-position: top;
 }
 
-@media screen and (min-width: 400px) {
-  .graphic-section {
-    background-image: url("/images/desktop/image-graphic-design.jpg");
-  }
-  .photography-section {
-    background-image: url("/images/desktop/image-photography.jpg");
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .brand-section,
-  .audience-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-  }
-  .brand-section h2,
-  .audience-section h2 {
-    text-align: left;
-  }
-  .brand-section .section-info {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .brand-section .section-info,
-  .audience-section .section-info {
-    text-align: left;
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-/* Photography and Graphic Design Sections */
 .photography-section .section-info,
 .graphic-section .section-info {
   position: absolute;
@@ -264,25 +233,14 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (min-width: 1000px) {
-  .section-info {
-    max-width: 42ch;
-  }
-  .section-info h2 {
-    font-size: 2.25rem;
-  }
-  .graphic-section .section-info,
-  .photography-section .section-info {
-    max-width: 36ch;
-  }
+.section-info h3 {
+  text-transform: capitalize;
 }
+
 .section-info p {
   font-size: 1rem;
 }
 
-.section-info h3 {
-  text-transform: capitalize;
-}
 .section-btn {
   position: relative;
   display: inline-block;
@@ -311,10 +269,53 @@ nav {
 .brand-section .section-btn::after {
   border-top: 10px solid var(--clr-yellow);
 }
+
+@media screen and (min-width: 400px) {
+  .graphic-section {
+    background-image: url("/images/desktop/image-graphic-design.jpg");
+  }
+  .photography-section {
+    background-image: url("/images/desktop/image-photography.jpg");
+  }
+}
+
 @media screen and (min-width: 800px) {
   .section-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .brand-section,
+  .audience-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+  .brand-section h2,
+  .audience-section h2 {
+    text-align: left;
+  }
+  .brand-section .section-info {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .brand-section .section-info,
+  .audience-section .section-info {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .section-info {
+    max-width: 42ch;
+  }
+  .section-info h2 {
+    font-size: 2.25rem;
+  }
+  .graphic-section .section-info,
+  .photography-section .section-info {
+    max-width: 36ch;
   }
 }
 
@@ -323,15 +324,16 @@ nav {
   padding: 3rem 0;
 }
 
-.testimonial img {
-  border-radius: 50%;
-  width: 80px;
-}
 .testimonial {
   display: grid;
   justify-items: center;
   text-align: center;
   padding: 2rem 0;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  width: 80px;
 }
 
 .testimonials-section .section-title {

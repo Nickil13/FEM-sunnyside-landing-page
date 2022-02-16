@@ -272,10 +272,10 @@ nav {
 
 @media screen and (min-width: 400px) {
   .graphic-section {
-    background-image: url("images/desktop/image-graphic-design.jpg");
+    background-image: url("./images/desktop/image-graphic-design.jpg");
   }
   .photography-section {
-    background-image: url("images/desktop/image-photography.jpg");
+    background-image: url("./images/desktop/image-photography.jpg");
   }
 }
 

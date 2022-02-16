@@ -79,7 +79,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
-    height: 700px;
+    /* height: 700px; */
   }
 }
 /*Navbar*/
@@ -163,7 +163,6 @@ nav {
   .nav-links {
     display: flex;
     align-items: center;
-    font-size: 16px;
   }
   .nav-links li:not(:first-child) {
     margin-left: 2rem;
@@ -173,6 +172,18 @@ nav {
   }
   .menu-icon {
     display: none;
+  }
+  .hero-title {
+    font-size: 3rem;
+    padding: 2rem;
+  }
+  .hero-arrow {
+    height: 120px;
+    margin: 4rem auto 0 auto;
+  }
+
+  header {
+    height: 780px;
   }
 }
 
@@ -238,7 +249,7 @@ nav {
 }
 
 .section-info p {
-  font-size: 1rem;
+  font-size: var(--f-size-body);
 }
 
 .section-btn {
@@ -313,6 +324,10 @@ nav {
   .section-info h2 {
     font-size: 2.25rem;
   }
+
+  .section-info h3 {
+    font-size: 1.75rem;
+  }
   .graphic-section .section-info,
   .photography-section .section-info {
     max-width: 36ch;
@@ -347,7 +362,6 @@ nav {
   color: var(--clr-gray-blue);
   font-weight: 900;
   font-family: var(--ff-secondary);
-  font-size: 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -359,7 +373,6 @@ nav {
 }
 .testimonial p {
   color: var(--clr-very-dark-gray-blue);
-  font-size: 1rem;
   max-width: 35ch;
   padding: 2rem 0.75rem;
 }
@@ -371,6 +384,9 @@ nav {
 @media screen and (min-width: 800px) {
   .testimonials-section {
     padding: 7rem 2rem;
+  }
+  .testimonials-section .section-title {
+    font-size: 1.5rem;
   }
   .testimonials {
     display: flex;
@@ -422,6 +438,13 @@ footer {
 .footer-logo {
   filter: invert(53%) sepia(7%) saturate(2367%) hue-rotate(118deg)
     brightness(89%) contrast(89%);
+}
+
+@media screen and (min-width: 800px) {
+  .footer-logo,
+  .nav-logo {
+    width: 150px;
+  }
 }
 
 .footer-links {
